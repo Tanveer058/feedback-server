@@ -19,6 +19,10 @@ app.use(express.json());
 
 app.use('/api/feedback', require('./routes/feedbackRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
+// Default root route to show API is running
+app.get('/', (req, res) => {
+  res.status(200).json({ success: true, message: 'API is running...' });
+});
 
 const PORT = process.env.PORT || 5000;
 
