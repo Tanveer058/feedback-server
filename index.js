@@ -12,7 +12,7 @@ const app = express();
 // app.use(cors());
 app.use(cors({
   // origin: 'http://localhost:5173', // for local testing
-  origin: 'https://feedback-client-inky.vercel.app/', // production client URL
+  origin: 'https://feedback-client-inky.vercel.app', // production client URL
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
